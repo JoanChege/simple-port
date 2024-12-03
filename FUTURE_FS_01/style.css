@@ -1,0 +1,273 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 70px; /* Adjust padding to avoid content being hidden behind navbar */
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+/* Header and Navbar */
+header {
+    padding: 1em;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(94, 92, 92, 0.8); /* Grey with transparency */
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+/* Navigation Links */
+nav a {
+    margin: 0 15px;
+    color: #333; /* Dark text for light mode */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #c3dbee;
+}
+
+/* Dark Mode Navigation Links */
+.dark-mode nav a:hover {
+    color: rgb(221, 214, 214); /* Light color for dark mode */
+}
+
+.dark-mode nav{
+    background-color:  rgba(13, 10, 10, 0.9);   
+    color: white;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+/* Section Styles */
+section {
+    padding: 2em;
+    text-align: center;
+}
+
+.about-content {
+    background-color: #f7f7f7; 
+    padding: 3em 1em;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    max-width: 800px;
+    margin: 10px auto;
+    font-size: large;
+    text-align: center; /
+}
+
+.icon-container {
+    background-color: #e0e0e0; 
+    border-radius: 50%; 
+    padding: 30px;
+    margin: 1em 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.tech-icon {
+    font-size: 60px; 
+    color: #6c757d; 
+}
+
+/* Fun Facts List */
+.fun-facts {
+    margin-top: 1em;
+    list-style-type: none;
+    padding-left: 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Skills Section */
+.skill {
+    margin: 1em 0;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress {
+    background-color: #6c757d; 
+    color: white;
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 20px;
+    height: 100%;
+    width: 0; 
+    transition: width 1s ease-in-out;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #f9f9f9;
+    padding: 3em 0;
+}
+
+#projects h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 1em;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #f3f3f3, #e7e7e7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.project-card h3 i {
+    margin-right: 10px;
+    color: #6c757d;
+}
+
+.project-card ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.project-card li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Image Styling */
+img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+#contact {
+    text-decoration: none;
+    
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 4em;
+    background-color: #ddd;
+    margin: 0 auto;
+}
+
+/* Dark Mode Styling for Elements */
+.dark-mode footer {
+    background-color: #444;
+    color: whitesmoke;
+}
+
+.dark-mode nav a {
+    color: #c1c2eb31;
+}
+.dark-mode #about{
+    background-color: #969292;
+}
+.dark-mode .about-content{
+    background-color: #969292;
+}
+.dark-mode .progress-bar {
+    background-color: rgb(37, 37, 37);
+}
+
+.dark-mode .progress {
+    background-color: rgb(88, 84, 84);
+}
+
+.dark-mode #projects {
+    background-color: #969292;
+}
+
+.dark-mode .project-card {
+    background: linear-gradient(135deg, #444, #555);
+}
+
+.dark-mode .project-card h3, .dark-mode .project-card li {
+    color: #ddd;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    img {
+        width: 80%;
+    }
+    .about-content {
+        max-width: 80%;
+        flex-direction: column;
+        gap: 10px;
+        font-size:medium
+    }
+    #projects{
+        gap: 10px;
+    }
+    #about{
+        gap: 10px;
+    }
+}
